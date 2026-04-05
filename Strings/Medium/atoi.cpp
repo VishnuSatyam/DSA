@@ -7,7 +7,7 @@ public:
         int i = 0;
         int n = s.length();
         int num = 0;
-        int sign = 1;
+        int sign = 1; // default sign is positive
 
         // 1. Skip leading spaces
         while (i < n && s[i] == ' ') {
