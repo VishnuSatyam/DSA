@@ -21,7 +21,7 @@ string convertToBinary(int n) {
 
     reverse(res.begin(), res.end());
     return res;
-} // tc will be O(n) , and sc will be O(n);
+} // tc will be O(logn) , and sc will beO(logn)
 
 
 // coonvert binary to decimal 
@@ -42,4 +42,4 @@ int convertToDecimal(string n) {
     }
 
     return num;
-}
+}  // tc will be O(len) , and sc will be O(1) as we are using only constant space to store the result and power of 2.
