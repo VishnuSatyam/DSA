@@ -26,3 +26,53 @@ public:
 };
 
 // tc and sc will be O(n)
+
+
+// iterative way for inorder traversal
+
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+
+        stack<TreeNode*> st;
+        TreeNode* node = root;
+        vector<int> inorder;
+
+        while (true) {
+
+            if (node != NULL) {
+                st.push(node);
+                node = node->left;
+            }
+            else {
+
+                if (st.empty() == true) {
+                    break;
+                }
+
+                node = st.top();
+                st.pop();
+
+                inorder.push_back(node->val);
+
+                node = node->right;
+            }
+        }
+
+        return inorder;
+    }
+};
+//  tc and sc is O(n)
+
+
+/*Node exists?
+        |
+      Yes
+        |
+Push it and go LEFT
+        |
+      No
+        |
+Pop from stack
+Visit it
+Go RIGHT*/
