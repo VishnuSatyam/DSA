@@ -32,4 +32,4 @@ public:
     }
 };
 
-// tc will be O(n) , sc will be O(n)
+// tc will be O(n) , sc will be O(n )
