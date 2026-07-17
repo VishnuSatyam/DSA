@@ -9,7 +9,7 @@ Stack → Explicit Stack
 
 Morris Traversal does something clever:
 
-Temporarily connect the inorder predecessor to the current node.
+Temporarily connect the inorder predecessor (rightmost (largest) node of the left subtree) to the current node.
 
 This temporary connection is called a thread.*/
 
