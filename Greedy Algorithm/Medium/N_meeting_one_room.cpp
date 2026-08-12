@@ -1,0 +1,31 @@
+class Solution {
+public:
+    int maxMeetings(vector<int>& start, vector<int>& end) {
+        int n = start.size();
+
+        vector<pair<int, int>> meetings;
+
+        for (int i = 0; i < n; i++) {
+            meetings.push_back({end[i], start[i]});
+        }
+
+        sort(meetings.begin(), meetings.end());
+
+        int count = 0;
+        int lastEnd = -1;
+
+        for (auto meeting : meetings) {
+            int endTime = meeting.first;
+            int startTime = meeting.second;
+
+            if (startTime > lastEnd) {
+                count++;
+                lastEnd = endTime;
+            }
+        }
+
+        return count;
+    }
+};
+/*TC = O(n log n)   // sorting
+SC = O(n)         // meetings vector*/
